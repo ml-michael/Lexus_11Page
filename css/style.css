@@ -1,5 +1,6 @@
 .page {
   text-align: center;
+  height: 100vh;
 }
 
 .card-title-section .title-underline::before {
