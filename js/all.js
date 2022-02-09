@@ -3,6 +3,7 @@ const titleSection = document.getElementById("title-section")
 const featureSmallItem = document.getElementById("featuresSmallItem")
 const featureBigItem = document.getElementById("featuresBigItem")
 const replaceName = document.getElementById("replaceName")
+const replaceItem = document.getElementById("replaceItem")
 const cardImgSection = document.getElementById("card-img-section")
 
 
@@ -33,7 +34,7 @@ for (let index = 0; index < Page_Data.featuresBigArray.length; index++) {
 }
 // replace item
 for (let index = 0; index < Page_Data.replaceArray.length; index++) {
-    // console.log(Page_Data.replaceArray)
+    console.log(Page_Data.replaceArray)
     replaceItem.innerHTML += `
             <li class="text-start" id="replaceItem">    
                 ${Page_Data.replaceArray[index]}
