@@ -2,7 +2,7 @@
 
 @function vw($value) {
     $value: 100 * $value / $rwdS;
-    @return $value + vw;
+    @return $value+vw;
     // @return $value + vmin;
 }
 
@@ -13,32 +13,32 @@
 
 @function vwM($value) {
     $value: 100 * $value / $rwdM;
-    @return $value + vw;
+    @return $value+vw;
 }
 
 @function vmin($value) {
     $value: 100 * $value / ($rwdM + 0);
-    @return $value + vmin;
+    @return $value+vmin;
 }
 
 @function vwL($value) {
     $value: 100 * $value / $rwdL;
-    @return $value + vw;
+    @return $value+vw;
 }
 
 @function vwX($value) {
     $value: 100 * $value / $rwdX;
-    @return $value + vw;
+    @return $value+vw;
 }
 
 @function vw2X($value) {
     $value: 100 * $value / $rwd2X;
-    @return $value + vw;
+    @return $value+vw;
 }
 
 @function vhX($value) {
     $value: 100 * $value / (1080 + 0);
-    @return $value + vh;
+    @return $value+vh;
 }
 
 @function lineHeight($fontSize, $lineHeight) {
@@ -49,7 +49,7 @@
 // Mixin
 
 @mixin hover {
-    
+
     @media (hover: hover) and (min-width: #{$rwdM + 1}px) {
         @content;
     }
@@ -57,11 +57,11 @@
 }
 
 @mixin lt($value) {
-    
+
     @media (max-width: #{$value}px) {
         @content;
     }
-    
+
 }
 
 @mixin tablet {
@@ -69,7 +69,7 @@
     @media (max-width: $tablet) {
         @content;
     }
-    
+
 }
 
 @mixin mobile {
@@ -77,7 +77,7 @@
     @media (max-width: $mobile) {
         @content;
     }
-    
+
 }
 
 @mixin landscape {
@@ -104,30 +104,33 @@
 }
 
 @mixin text-gradient {
-    background: linear-gradient(0deg, rgba(239,166,1,1) 0%, rgba(239,166,1,1) 47%, rgba(255,222,0,1) 48%, rgba(255,222,0,1) 100%);
+    background: linear-gradient(0deg, rgba(239, 166, 1, 1) 0%, rgba(239, 166, 1, 1) 47%, rgba(255, 222, 0, 1) 48%, rgba(255, 222, 0, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 @mixin stroke($color: #000, $size: 1px) {
-    text-shadow:
-        -#{$size} -#{$size} 0 $color,
-        0        -#{$size} 0 $color,
-        #{$size} -#{$size} 0 $color,
-        #{$size}  0        0 $color,
-        #{$size}  #{$size} 0 $color,
-        0         #{$size} 0 $color,
-        -#{$size}  #{$size} 0 $color,
-        -#{$size}  0        0 $color;
+    text-shadow: -#{$size} -#{$size} 0 $color,
+    0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color,
+    #{$size} 0 0 $color,
+    #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color,
+    -#{$size} #{$size} 0 $color,
+    -#{$size} 0 0 $color;
 }
 
 @mixin moveFadeDefault($props: (transfrom, opacity), $dur: $secondaryDuration, $delay: 0s, $ease: ease-out, $value: 30%) {
     will-change: $props;
-    @if $props == (transfrom, opacity) {
+
+    @if $props==(transfrom, opacity) {
         transform: translateY($value);
-    } @else if $props == (margin, opacity) {
+    }
+
+    @else if $props==(margin, opacity) {
         margin-top: $value;
     }
+
     opacity: 0;
     transition-property: $props;
     transition-duration: $dur;
@@ -136,11 +139,14 @@
 }
 
 @mixin moveFadeIn($props: transform) {
-    @if $props == transfrom {
+    @if $props==transfrom {
         transform: translateY(0);
-    } @else if $props == (margin) {
+    }
+
+    @else if $props==(margin) {
         margin-top: 0;
     }
+
     opacity: 1;
 }
 
@@ -150,11 +156,14 @@
     transform: scale(0) translateZ(0);
     opacity: 0;
     backface-visibility: hidden;
-    will-change: transform, opacity
+    will-change: transform, opacity;
+    -webkit-transition: all $primaryDuration ease-out;
+    -moz-transition: all $primaryDuration ease-out;
+    -ms-transition: all $primaryDuration ease-out;
+    -o-transition: all $primaryDuration ease-out;
 }
 
 @mixin scaleIn {
     transform: scale(1);
     opacity: 1;
 }
-
