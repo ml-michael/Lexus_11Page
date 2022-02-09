@@ -59,9 +59,10 @@
     </div>
 
 
-    <!--  -->
+    <!-- script  -->
     <script src="./js/bootstrap-js/bootstrap.min.js"></script>
-    <script>
+    <!-- <script>
+
         const cardTitle = document.getElementById("cardTitle")
         const titleSection = document.getElementById("title-section")
         const featureSmallItem = document.getElementById("featuresSmallItem")
@@ -86,6 +87,7 @@
             imageName: "blueCar"
 
         }
+
         cardTitle.textContent = Page_Data.pageName;
         titleSection.textContent = Page_Data.featureName;
         replaceName.textContent = Page_Data.replaceName
@@ -109,6 +111,29 @@
             <li class="text-start" id="replaceItem">    
                 ${Page_Data.replaceArray[index]}
             </li>`
+        }
+    </script> -->
+
+    <script>
+        const Page_Data = {
+            pageName: "火星塞",
+            featureName: "特色",
+            featuresArray: [
+                "01負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
+                "02負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
+                "03負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
+                "03負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。"
+            ],
+            featuresBigArray: [
+                "建議定期更換，以確保引擎運轉效率和油耗表現。"
+            ],
+            replaceName: "更換/檢查週期",
+            replaceArray: [
+                "長效型：每十萬公里",
+                "長效型：每十萬公里"
+            ],
+            imageName: "blueCar"
+
         }
     </script>
     <script src="./js/all.js"></script>
