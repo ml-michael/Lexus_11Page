@@ -28,9 +28,9 @@ for (let index = 0; index < Page_Data.featuresArray.length; index++) {
 for (let index = 0; index < Page_Data.featuresBigArray.length; index++) {
     // console.log(Page_Data.featuresArray)
     featuresBigItem.innerHTML += `
-            <li class="text-start big-item " id="featuresBigItem">    
+            <span class="text-start big-item " id="featuresBigItem">    
                 ${Page_Data.featuresBigArray[index]}
-            </li>`
+            </span>`
 }
 // replace item
 for (let index = 0; index < Page_Data.replaceArray.length; index++) {

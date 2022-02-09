@@ -13,7 +13,7 @@
   background-color: #000;
 }
 
-ul li.big-item {
-  list-style-image: url("../svg//star-fill.svg");
+#star::before {
+  content: '\2605';
 }
 /*# sourceMappingURL=style.css.map */

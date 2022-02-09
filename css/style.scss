@@ -1,7 +1,17 @@
-.page {
-    text-align: center;
+@import '_variables';
+@import '_mixins';
+
+
+@mixin vw($rwdS) {
+    // color: aqua;
 }
 
+.page {
+    text-align: center;
+    // @include vw($rwdS)
+}
+
+// 標題下底線
 .card-title-section {
     .title-underline {
         &::before {
@@ -16,8 +26,8 @@
     }
 }
 
-ul {
-    li.big-item {
-        list-style-image: url("../svg//star-fill.svg");
+#star {
+    &::before {
+        content: '\2605';
     }
 }
