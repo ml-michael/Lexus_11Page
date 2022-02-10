@@ -1,35 +1,9 @@
 @import '_variables';
 @import '_mixins';
 
-
-// @mixin vw($mobile) {
-//     color: $color-black;
-// }
-
-$wide: '(min-width: 1800px)' !default;
-$desktop: '(min-width: 1200px)' !default;
-$tablet-landscape: '(min-width: 900px)' !default;
-$tablet-protrait: '(min-width: 600px)' !default;
-$phone: '(max-width: 600px)' !default;
-
-// @mixin media($query:$wide) {
-//     @media #{$query} {
-//         @content
-//     }
-// }
-
-// @include media($wide) {
-//     #container {
-//         >.card {
-//             width: 50%;
-//         }
-//     }
-// }
-
 .page {
     text-align: center;
 }
-
 
 // 標題下底線
 .card-title-section {

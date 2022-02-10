@@ -1,5 +1,7 @@
-// Function
+// 主要功能，隨著裝置變更行高以及大小
+// 最後一個 function 自動偵測需求的版面大小，做自適應大小
 
+// Function
 @function vw($value) {
     $value: 100 * $value / $rwdS;
     @return $value+vw;
@@ -47,7 +49,8 @@
 }
 
 // Mixin
-
+// TODO:變數錨點，會加入不同的樣式（不需帶參數）
+// min-width 可以自己更改，當前需要的版面大小
 @mixin hover {
 
     @media (hover: hover) and (min-width: #{$rwdM + 1}px) {
@@ -56,6 +59,7 @@
 
 }
 
+// TODO:RWD （可以自定義 max-width）
 @mixin lt($value) {
 
     @media (max-width: #{$value}px) {
@@ -88,27 +92,33 @@
 
 }
 
+// TODO:消失效果
 @mixin hide-text {
     font-size: 0;
     text-indent: -5000px;
 }
 
+// TODO:水平跳動
 @mixin scale-x {
     display: inline-block;
     transform: scaleX(0.9);
 }
 
+// TODO:垂直跳動
 @mixin scale-y {
     display: inline-block;
     transform: scaleY(0.9);
 }
 
+// TODO:文字背景漸層（類似彩虹）
 @mixin text-gradient {
     background: linear-gradient(0deg, rgba(239, 166, 1, 1) 0%, rgba(239, 166, 1, 1) 47%, rgba(255, 222, 0, 1) 48%, rgba(255, 222, 0, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
+// TODO:加粗陰影
 @mixin stroke($color: #000, $size: 1px) {
     text-shadow: -#{$size} -#{$size} 0 $color,
     0 -#{$size} 0 $color,
@@ -120,6 +130,7 @@
     -#{$size} 0 0 $color;
 }
 
+// TODO:漸進消失
 @mixin moveFadeDefault($props: (transfrom, opacity), $dur: $secondaryDuration, $delay: 0s, $ease: ease-out, $value: 30%) {
     will-change: $props;
 
@@ -138,6 +149,7 @@
     transition-timing-function: $ease;
 }
 
+// TODO:
 @mixin moveFadeIn($props: transform) {
     @if $props==transfrom {
         transform: translateY(0);
@@ -150,6 +162,7 @@
     opacity: 1;
 }
 
+// TODO:點擊大幅跳動
 @mixin scaleDefault {
     transition: all $primaryDuration ease-out;
     transition-property: opacity, transform;
@@ -163,7 +176,12 @@
     -o-transition: all $primaryDuration ease-out;
 }
 
+// TODO:不知道是什麼動畫
 @mixin scaleIn {
     transform: scale(1);
     opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
