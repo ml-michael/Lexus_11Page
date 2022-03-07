@@ -3,25 +3,111 @@
 
 .page {
     text-align: center;
+    background-color: #ccc;
+    height: 100%;
+    width: 100%;
+    background: url('../image/pattern.png');
 }
 
-// 標題下底線
-.card-title-section {
-    .title-underline {
-        &::before {
-            content: "";
-            position: absolute;
-            left: 50;
-            transform: translate(-50%);
-            width: 30px;
-            height: 2px;
-            background-color: #000;
+.card-section {
+    width: 100%;
+    margin-bottom: 250px;
+
+    .card {
+        width: 100%;
+        background-color: transparent !important;
+
+        // 標題下底線
+        .card-title-section {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+
+
+            h2.card-title {
+                font-size: 42px;
+            }
+
+            .title-underline {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 70px;
+                    height: 2px;
+                    background-color: #000;
+                    -webkit-transform: translate(-50%);
+                    -moz-transform: translate(-50%);
+                    -ms-transform: translate(-50%);
+                    -o-transform: translate(-50%);
+                }
+            }
+        }
+
+        .card-body {
+            .card-img-section {
+                max-width: 600px;
+                background-color: #e2e2e2;
+                margin: 0 auto;
+
+                .card-img-top {
+                    width: auto;
+                    background-size: cover;
+                }
+            }
+
+            h3.title-section {
+                font-size: 36px;
+                background-color: #e2e2e2;
+                height: 65px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 400;
+                max-width: 600px;
+                margin: 0 auto;
+                margin-top: 80px;
+                margin-bottom: 35px;
+            }
+
+            ul {
+                max-width: 600px;
+                margin: 0 auto;
+
+                li {
+                    font-size: 26px;
+                    list-style: none;
+
+                    &::before {
+                        content: "\2022";
+                        color: #267fdb;
+                        font-weight: bold;
+                        font-size: 24px;
+                        display: inline-block;
+                        width: 24px;
+                    }
+                }
+            }
         }
     }
 }
+
+
 
 #star {
     &::before {
         content: '\2605';
     }
 }
+
+
+
+
+// - `h2` : 42px
+// - `h3` : 36px
+// - li 圓點色票：#267fdb
+// - 內文：26px
+// - 圖片外框：寬600px , 長 380px
+//     - 圖片：寬 470px
+// - 灰色長條：max-width : 600、height: 65px;

@@ -4,42 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <!-- Just for mobile meta -->
+    <meta name="viewport" content="width=650, user-scalable=no">
     <link rel="stylesheet" href="./css/bootstrap-css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Product02</title>
 </head>
 
 <body>
-    <div class="page vh-100 m-5">
+    <div class="page pt-5 mx-auto">
         <div class="container-fluid">
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-center">
                     <div class="card-section">
-                        <div class="card border-0" style="width: 24rem;">
-                            <div class="card-title-section position-relative m-3 text-center">
-                                <h5 class="card-title fw-bold" id="cardTitle"></h5>
+                        <div class="card border-0">
+                            <div class="card-title-section position-relative text-center">
+                                <h2 class="card-title fw-normal" id="cardTitle"></h2>
                                 <span class="title-underline"></span>
                             </div>
-
                             <div class="card-body">
                                 <div class="card-img-section" id="card-img-section">
                                     <img class="card-img-top img-fluid" id="card-image" alt="picture" />
                                 </div>
-                                <div class="title-section bg-light text-secondary" id="title-section">{{ featureName }}
-                                </div>
-                                <ul class="">
-                                    <li class="text-start m-3" id="featuresSmallItem"></li>
-                                    <p class="text-start fs-3">
+                                <!-- 特色 -->
+                                <h3 class="title-section" id="title-section">{{ featureName }}
+                                </h3>
+                                <ul>
+                                    <li class="text-start" id="featuresSmallItem"></li>
+                                    <!-- <p class="text-start fs-3">
                                         <span id="star"></span>
                                         <span id="featuresBigItem"></span>
-                                    </p>
+                                    </p> -->
                                 </ul>
-                                <div class="title-section bg-light text-secondary" id="replaceName">
-                                </div>
-                                <ul class="m-3">
-                                    <li class="text-start" id="replaceItem"></li>
-                                </ul>
+
+                                <!-- 更換/檢查週期 -->
+                                <h3 class="title-section" id="regularName">
+                                </h3>
+                                <ul id="regularItem"></ul>
+                                <!-- 定期檢查 -->
+                                <h3 class="title-section" id="replaceName"></h3>
+                                <ul id="replaceItem"></ul>
                             </div>
                         </div>
                     </div>
@@ -49,84 +53,26 @@
     </div>
 
 
-    <!--  -->
+    <!-- script  -->
     <script src="./js/bootstrap-js/bootstrap.min.js"></script>
-    <!-- <script>
-
-        const cardTitle = document.getElementById("cardTitle")
-        const titleSection = document.getElementById("title-section")
-        const featureSmallItem = document.getElementById("featuresSmallItem")
-        const replaceName = document.getElementById("replaceName")
-        const cardImgSection = document.getElementById("card-img-section")
-        const imageURL = 2
-        const Page_Data = {
-            pageName: "火星塞",
-            featureName: "特色",
-            featuresArray: [
-                "01負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "02負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "03負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。"
-            ],
-            featuresBigArray: [
-                "建議定期更換，以確保引擎運轉效率和油耗表現。"
-            ],
-            replaceName: "更換/檢查週期",
-            replaceArray: [
-                "長效型：每十萬公里"
-            ],
-            imageName: "blueCar"
-
-        }
-
-        cardTitle.textContent = Page_Data.pageName;
-        titleSection.textContent = Page_Data.featureName;
-        replaceName.textContent = Page_Data.replaceName
-        cardImgSection.innerHTML = `
-            <img 
-            class="card-img-top img-fluid" id="card-image" alt="picture" 
-            src=\"./image/${Page_Data.imageName}.jpeg"\>
-        `
-        // features item
-        for (let index = 0; index < Page_Data.featuresArray.length; index++) {
-            console.log(Page_Data.featuresArray)
-            featureSmallItem.innerHTML += `
-            <li class="text-start" id="featuresSmallItem">    
-                ${Page_Data.featuresArray[index]}
-            </li>`
-        }
-        // replace item
-        for (let index = 0; index < Page_Data.replaceArray.length; index++) {
-            console.log(Page_Data.replaceArray)
-            replaceItem.innerHTML += `
-            <li class="text-start" id="replaceItem">    
-                ${Page_Data.replaceArray[index]}
-            </li>`
-        }
-    </script> -->
-
     <script>
+        // data
         const Page_Data = {
-            pageName: "汽車",
-            featureName: "特色",
+            pageName: "煞車來令片",
+            featureName: "功能",
             featuresArray: [
-                "01負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "02負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "03負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "05負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "05負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。",
-                "05負責點燃引擎汽缸內之壓縮混合氣體，以提供行駛動力。"
+                "透過與煞車盤摩擦產生煞車力，以降低車速和停止車輛。"
             ],
-            featuresBigArray: [
-                "建議定期更換，以確保引擎運轉效率和油耗表現。",
-                "建議定期更換，以確保引擎運轉效率和油耗表現。"
+            replaceRegular: "定期檢查/更換效益",
+            regularArray: [
+                "建議定期檢查、更換，避免煞車來令片過度磨耗使煞車碟盤受損，影響煞車制動力。"
             ],
             replaceName: "更換/檢查週期",
             replaceArray: [
-                "長效型：每十萬公里",
-                "長效型：每十萬公里",
-                "長效型：每十萬公里"
+                "低頻車：每半年",
+                "高頻車：每 1 萬公里"
             ],
-            imageName: "blueCar"
+            imageName: "02"
 
         }
     </script>

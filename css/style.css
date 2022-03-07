@@ -1,16 +1,93 @@
 .page {
   text-align: center;
+  background-color: #ccc;
+  height: 100%;
+  width: 100%;
+  background: url("../image/pattern.png");
 }
 
-.card-title-section .title-underline::before {
+.card-section {
+  width: 100%;
+  margin-bottom: 250px;
+}
+
+.card-section .card {
+  width: 100%;
+  background-color: transparent !important;
+}
+
+.card-section .card .card-title-section {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.card-section .card .card-title-section h2.card-title {
+  font-size: 42px;
+}
+
+.card-section .card .card-title-section .title-underline::before {
   content: "";
   position: absolute;
-  left: 50;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  width: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 70px;
   height: 2px;
   background-color: #000;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+.card-section .card .card-body .card-img-section {
+  max-width: 600px;
+  background-color: #e2e2e2;
+  margin: 0 auto;
+}
+
+.card-section .card .card-body .card-img-section .card-img-top {
+  width: auto;
+  background-size: cover;
+}
+
+.card-section .card .card-body h3.title-section {
+  font-size: 36px;
+  background-color: #e2e2e2;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 35px;
+}
+
+.card-section .card .card-body ul {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-section .card .card-body ul li {
+  font-size: 26px;
+  list-style: none;
+}
+
+.card-section .card .card-body ul li::before {
+  content: "\2022";
+  color: #267fdb;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+  width: 24px;
 }
 
 #star::before {
