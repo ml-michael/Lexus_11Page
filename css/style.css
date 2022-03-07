@@ -24,6 +24,7 @@
 
 .card-section .card .card-title-section h2.card-title {
   font-size: 42px;
+  margin-bottom: 30px;
 }
 
 .card-section .card .card-title-section .title-underline::before {
@@ -40,6 +41,11 @@
   -o-transform: translate(-50%);
 }
 
+.card-section .card .card-body {
+  padding: 0;
+  margin-top: 45px;
+}
+
 .card-section .card .card-body .card-img-section {
   max-width: 600px;
   background-color: #e2e2e2;
@@ -47,7 +53,7 @@
 }
 
 .card-section .card .card-body .card-img-section .card-img-top {
-  width: auto;
+  width: 600px;
   background-size: cover;
 }
 
