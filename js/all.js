@@ -21,7 +21,7 @@ cardImgSection.innerHTML = `
 // features item
 for (let index = 0; index < Page_Data.featuresArray.length; index++) {
     // console.log(Page_Data.featuresArray)
-    featureSmallItem.innerHTML += `${Page_Data.featuresArray[index]}`
+    featureSmallItem.innerHTML += `<span>${Page_Data.featuresArray[index]}</span>`
 }
 // features big item
 
@@ -36,15 +36,15 @@ for (let index = 0; index < Page_Data.replaceArray.length; index++) {
     replaceItem.innerHTML += `
     
     <li class="text-start" id="replaceItem">
-    ${Page_Data.replaceArray[index]}
+    <span>${Page_Data.replaceArray[index]}</span>
     </li>
     `
 }
 for (let index = 0; index < Page_Data.regularArray.length; index++) {
     // console.log(Page_Data.replaceArray)
     regularItem.innerHTML += `
-    <li class="text-start" id="replaceItem">
-    ${Page_Data.regularArray[index]}
+    <li class="text-start letter-3" id="replaceItem">
+    <span>${Page_Data.regularArray[index]}</span>
     </li>
     
     `

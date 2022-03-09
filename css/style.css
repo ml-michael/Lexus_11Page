@@ -85,16 +85,19 @@
 
 .card-section .card .card-body ul li {
   font-size: 26px;
-  list-style: none;
+  color: #267fdb;
 }
 
-.card-section .card .card-body ul li::before {
-  content: "\2022";
-  color: #267fdb;
-  font-weight: bold;
-  font-size: 24px;
-  display: inline-block;
-  width: 24px;
+.card-section .card .card-body ul li span {
+  color: #000;
+}
+
+.letter-4 {
+  letter-spacing: 4px;
+}
+
+.letter-3 {
+  letter-spacing: 3px;
 }
 
 #star::before {
