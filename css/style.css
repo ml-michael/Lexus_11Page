@@ -1,3 +1,38 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "nbd";
+  src: url("../fonts/nobd-webfont.eot");
+  src: url("../fonts/nobd-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nobd-webfont.woff") format("woff"), url("../fonts/nobd-webfont.ttf") format("truetype"), url("../fonts/nobd-webfont.svg#nobel-boldregular") format("svg");
+}
+
+@font-face {
+  font-family: "nbk";
+  src: url("../fonts/nobk-webfont.eot");
+  src: url("../fonts/nobk-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nobk-webfont.woff") format("woff"), url("../fonts/nobk-webfont.ttf") format("truetype"), url("../fonts/nobk-webfont.svg#nobel-bookregular") format("svg");
+}
+
+@font-face {
+  font-family: "nbl";
+  src: url("../fonts/nobl-webfont.eot");
+  src: url("../fonts/nobl-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nobl-webfont.woff") format("woff"), url("../fonts/nobl-webfont.ttf") format("truetype"), url("../fonts/nobl-webfont.svg#nobel-blackregular") format("svg");
+}
+
+@font-face {
+  font-family: "nlt";
+  src: url("../fonts/nolt-webfont.eot");
+  src: url("../fonts/nolt-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nolt-webfont.woff") format("woff"), url("../fonts/nolt-webfont.ttf") format("truetype"), url("../fonts/nolt-webfont.svg#nobel-lightregular") format("svg");
+}
+
+@font-face {
+  font-family: "nr";
+  src: url("../fonts/nor-webfont.eot");
+  src: url("../fonts/nor-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nor-webfont.woff") format("woff"), url("../fonts/nor-webfont.ttf") format("truetype"), url("../fonts/nor-webfont.svg#nobel-regularregular") format("svg");
+}
+
+* {
+  font-family: "nbk", "Noto Sans TC", "微軟正黑體", arial, sans-serif !important;
+}
+
 .page {
   text-align: center;
   background-color: #ccc;
