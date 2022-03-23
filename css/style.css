@@ -54,7 +54,9 @@
 
 .card-section .card .card-body .card-img-section .card-img-top {
   width: 600px;
+  height: 385px;
   background-size: cover;
+  background-position: center;
 }
 
 .card-section .card .card-body h3.title-section {
@@ -101,6 +103,6 @@
 }
 
 #star::before {
-  content: '\2605';
+  content: "\2605";
 }
 /*# sourceMappingURL=style.css.map */

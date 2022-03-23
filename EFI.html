@@ -1,81 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Just for mobile meta -->
-    <meta name="viewport" content="width=750, user-scalable=no">
-    <link rel="stylesheet" href="./css/bootstrap-css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=750, user-scalable=no" />
+    <link rel="stylesheet" href="./css/bootstrap-css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>燃油系清淨劑</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="page pt-5 mx-auto">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col d-flex justify-content-center align-items-center">
-                    <div class="card-section">
-                        <div class="card border-0">
-                            <div class="card-title-section position-relative text-center">
-                                <h2 class="card-title fw-normal" id="cardTitle"></h2>
-                                <span class="title-underline"></span>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-img-section" id="card-img-section">
-                                    <img class="card-img-top img-fluid" id="card-image" alt="picture" />
-                                </div>
-                                <!-- 特色 -->
-                                <h3 class="title-section" id="title-section">{{ featureName }}
-                                </h3>
-                                <ul>
-                                    <li class="text-start" id="featuresSmallItem"></li>
-                                    <!-- <p class="text-start fs-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col d-flex justify-content-center align-items-center">
+            <div class="card-section">
+              <div class="card border-0">
+                <div class="card-title-section position-relative text-center">
+                  <h2 class="card-title fw-normal" id="cardTitle"></h2>
+                  <span class="title-underline"></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-img-section" id="card-img-section">
+                    <img
+                      class="card-img-top img-fluid"
+                      id="card-image"
+                      alt="picture"
+                    />
+                  </div>
+                  <!-- 特色 -->
+                  <h3 class="title-section" id="title-section">
+                    {{ featureName }}
+                  </h3>
+                  <ul>
+                    <li class="text-start" id="featuresSmallItem"></li>
+                    <!-- <p class="text-start fs-3">
                                         <span id="star"></span>
                                         <span id="featuresBigItem"></span>
                                     </p> -->
-                                </ul>
+                  </ul>
 
-                                <!-- 更換/檢查週期 -->
-                                <h3 class="title-section" id="regularName">
-                                </h3>
-                                <ul id="regularItem"></ul>
-                                <!-- 定期檢查 -->
-                                <h3 class="title-section" id="replaceName"></h3>
-                                <ul id="replaceItem"></ul>
-                            </div>
-                        </div>
-                    </div>
+                  <!-- 更換/檢查週期 -->
+                  <h3 class="title-section" id="regularName"></h3>
+                  <ul id="regularItem"></ul>
+                  <!-- 定期檢查 -->
+                  <h3 class="title-section" id="replaceName"></h3>
+                  <ul id="replaceItem"></ul>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <!-- script  -->
     <script src="./js/bootstrap-js/bootstrap.min.js"></script>
     <script>
-        // data
-        const Page_Data = {
-            pageName: "燃油系清淨劑",
-            featureName: "功能",
-            featuresArray: [
-                "可清除汽油燃燒所產生之積碳並抑制積碳生成。"
-            ],
-            replaceRegular: "定期檢查/更換效益",
-            regularArray: [
-                "建議定期添加，避免引擎積碳造成引擎抖動和爆震，確保行車性能與安全，並可節省汽油消耗，延長燃料系統壽命。"
-            ],
-            replaceName: "更換/檢查週期",
-            replaceArray: [
-                "每 1 萬公里",
-            ],
-            imageName: "06"
-
-        }
+      // data
+      const Page_Data = {
+        pageName: "燃油系清淨劑",
+        featureName: "功能",
+        featuresArray: ["可清除汽油燃燒所產生之積碳並抑制積碳生成。"],
+        replaceRegular: "定期檢查/更換效益",
+        regularArray: [
+          "建議定期添加，避免引擎積碳造成引擎抖動和爆震，確保行車性能與安全，並可節省汽油消耗，延長燃料系統壽命。",
+        ],
+        replaceName: "更換/檢查週期",
+        replaceArray: ["每 1 萬公里"],
+        imageName: "EFI",
+      };
     </script>
     <script src="./js/all.js"></script>
-</body>
-
+  </body>
 </html>
